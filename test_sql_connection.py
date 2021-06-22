@@ -4,8 +4,8 @@ import  mysql.connector
 # establish connection to database
 database = mysql.connector.connect(
         host='localhost',
-        user='arikiri', 
-        passwd='K1nG5L4y3R!'
+        user='', 
+        passwd=''
         )
 # create cursor for queries
 cursor = database.cursor()

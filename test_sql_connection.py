@@ -1,11 +1,12 @@
 # import the sql.connector
 import  mysql.connector
+from getpass import getpass
 
 # establish connection to database
 database = mysql.connector.connect(
         host='localhost',
-        user='', 
-        passwd=''
+        user=input('Enter username: '), 
+        passwd=getpass('Enter password: ')
         )
 # create cursor for queries
 cursor = database.cursor()

@@ -1,4 +1,2 @@
 *.env
 *.key
-pseudo_pm.py
-test_sql_connection.py

@@ -16,7 +16,7 @@ print(f'This is the encrypted plaintext: {encrypted}')
 
 # decrypt encrypted text
 decrypted = f.decrypt(encrypted)
-print(f'This is the decrypted encrypted text: {decrypted}')
+print(f'This is the decrypted encrypted text: {decrypted.decode()}')
 
 
 

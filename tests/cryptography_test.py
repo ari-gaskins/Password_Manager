@@ -1,4 +1,3 @@
-import os
 from cryptography.fernet import Fernet
 
 # encode string to bytes

@@ -7,5 +7,5 @@ plaintext = 'hello'.encode()
 d = hashlib.sha256(plaintext)
 
 # generate binary hash of 'hello' string
-hash_txt = d.digest()
+hash_txt = d.hexidigest()
 print(hash_txt)

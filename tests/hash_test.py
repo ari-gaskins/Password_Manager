@@ -1,3 +1,5 @@
+# I learned that password hashing is used primarily for password verification, 
+# it is not for storing and taking out the same password because it is a one-way function
 import hashlib
 
 # encode string hello to bytes

@@ -5,17 +5,18 @@ plaintext = 'password'.encode()
 
 # key generation 
 key = Fernet.generate_key()
+print(f'This is the key: {key}')
 
 # create fernet object
 f = Fernet(key)
 
 # encrypt plaintext using key
 encrypted = f.encrypt(plaintext)
-print(encrypted)
+print(f'This is the encrypted plaintext: {encrypted}')
 
 # decrypt encrypted text
 decrypted = f.decrypt(encrypted)
-print(decrypted)
+print(f'This is the decrypted encrypted text: {decrypted}')
 
 
 

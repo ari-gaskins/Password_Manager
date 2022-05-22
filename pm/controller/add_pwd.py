@@ -1,13 +1,19 @@
 import mysql.connector
 import os
+import sys
 from getpass import getpass
 from cryptography.fernet import Fernet
 from dotenv import load_dotenv
-from model.Data import Data
 
 
+# append path for module import
+sys.path.append(r'/home/arikiri/Documents/GitHub/Password_Manager/pm')
 
-# collect database
+# import Data class
+from model import Data
+
+
+# collect database info
 load_dotenv()
 DATABASE = os.getenv('DATABASE') 
 TABLE = os.getenv('TABLE')
@@ -30,7 +36,12 @@ cursor = connection.cursor()
 # instantiate Data objec
 d = Data.Data()
 # add attributes
-user = d.set_user()
+d.set_user()
+d.set_pwd()
+d.set_email()
+d.set_site()
+d.set_bkup_em()
+d.set_key()
 
 
 # insert collected attributes into table

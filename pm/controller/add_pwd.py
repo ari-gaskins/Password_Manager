@@ -43,12 +43,12 @@ d.set_site(input('Enter website to add: '))
 d.set_bkup_em(input('Enter backup email associated with site: '))
 d.set_key(Fernet.generate_key())
 
-user = str(d.get_user())
-pwd = str(d.get_pwd())
-site = str(d.get_site())
-email = str(d.get_email())
-bkup_email = str(d.get_bkup_em())
-key = str(d.get_key())
+user = d.get_user()
+pwd = d.get_pwd()
+site = d.get_site()
+email = d.get_email()
+bkup_email = d.get_bkup_em()
+key = d.get_key()
 
 
 # insert collected attributes into table

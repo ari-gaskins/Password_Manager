@@ -54,10 +54,3 @@ class Data:
             pass
         self.bkup_em = b
 
-    # key getter
-    def get_key(self): 
-        return self.key
-
-    # key setter
-    def set_key(self, k): 
-        self.key = k

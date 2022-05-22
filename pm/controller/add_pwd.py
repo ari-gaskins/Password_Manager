@@ -58,8 +58,8 @@ k = Fernet(key)
 raw_pwd = raw_pwd.encode()
 
 # encrypt password before pushing to database
-encrypted_pwd = k.encrypt(raw_pwd)
-encrypted_pwd = encrypted_pwd.decode()[:50]
+encrypted_pwd = k.encrypt(raw_pwd)[:48]
+encrypted_pwd = encrypted_pwd.decode()
 
 # insert collected attributes into table
 table_query = f'''INSERT INTO {TABLE} (username, pass_word, website, email, backup_email) 
@@ -70,5 +70,6 @@ connection.commit()
 print('New data added!')
 
 # decryption test to make sure password returns the same
+encrypted_pwd = encrypted_pwd.encode()
 decrypted_pwd = k.decrypt(encrypted_pwd)
 print(decrypted_pwd)

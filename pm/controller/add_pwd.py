@@ -68,3 +68,7 @@ record_data = (user, encrypted_pwd, site, email, bkup_email)
 cursor.execute(table_query, record_data)
 connection.commit()
 print('New data added!')
+
+# decryption test to make sure password returns the same
+decrypted_pwd = k.decrypt(encrypted_pwd)
+print(decrypted_pwd)

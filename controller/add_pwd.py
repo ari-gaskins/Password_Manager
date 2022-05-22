@@ -3,7 +3,7 @@ import os
 from getpass import getpass
 from cryptography.fernet import Fernet
 from dotenv import load_dotenv
-import Data 
+from model.Data import Data
 
 
 
@@ -30,7 +30,8 @@ cursor = connection.cursor()
 # instantiate Data objec
 d = Data.Data()
 # add attributes
-user = d.get_user
+user = d.set_user()
+
 
 # insert collected attributes into table
 # table_query = f'INSERT INTO {TABLE} VALUE ({}, {}, {});'

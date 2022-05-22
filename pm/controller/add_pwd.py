@@ -43,9 +43,17 @@ d.set_site()
 d.set_bkup_em()
 d.set_key()
 
+user = d.get_user()
+pwd = d.get_pwd()
+site = d.get_site()
+email = d.get_email()
+bkup_email = d.get_bkup_em()
+key = d.get_key()
+
 
 # insert collected attributes into table
-# table_query = f'INSERT INTO {TABLE} VALUE ({}, {}, {});'
-# cursor.execute(table_query)
-# for table in cursor:
-       # print(table)
+table_query = f'''INSERT INTO {TABLE}(username, pass_word, website, email, backup_email) 
+VALUES ({user}, {pwd}, {site}, {email}, {bkup_email});'''
+cursor.execute(table_query)
+for table in cursor:
+       print(table)

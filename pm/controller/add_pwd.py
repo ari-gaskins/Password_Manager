@@ -20,13 +20,13 @@ TABLE = os.getenv('TABLE')
 
 # establish connection to database
 try:
-        with mysql.connector.connect(
+        connection = mysql.connector.connect(
         host='localhost',
         user=input('Enter username: '), 
         passwd=getpass('Enter master password: '),
         database=DATABASE
-        ) as connection:
-                print('Established connection to database...')
+        )
+        print('Established connection to database...')
 except Exception as e:
         print(e)
 

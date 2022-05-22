@@ -4,7 +4,8 @@ from getpass import getpass
 # class to collect user data
 class Data:
 
-    def __init__(self, usr, pwd, site, email, bkup_em, key):
+    def __init__(self, usr = '', pwd = '', site = '', 
+    email = '', bkup_em = '', key = ''):
         self.usr = usr
         self.pwd = pwd
         self.site = site

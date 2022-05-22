@@ -1,6 +1,3 @@
-from cryptography.fernet import Fernet
-from getpass import getpass
-
 # class to collect user data
 class Data:
 
@@ -18,8 +15,7 @@ class Data:
        return self.usr
 
     # username setter
-    def set_user(self, u):
-        u = input('Enter new username to add: ')
+    def set_user(self, u): 
         self.usr = u
     
     # password getter
@@ -27,8 +23,7 @@ class Data:
         return self.pwd
 
     # password setter
-    def set_pwd(self, p):
-        p = getpass('Enter new password to add: ')
+    def set_pwd(self, p): 
         self.pwd = p
 
     # website getter
@@ -36,8 +31,7 @@ class Data:
         return self.site
     
     # website setter
-    def set_site(self, s):
-        s = input('Enter website to add: ')
+    def set_site(self, s): 
         self.site = s
 
     # email getter
@@ -45,8 +39,7 @@ class Data:
         return self.email
 
     # email setter
-    def set_email(self, e):
-        e = input('Enter email associated with site: ')
+    def set_email(self, e): 
         if e is None:
             pass
         self.email = e
@@ -56,8 +49,7 @@ class Data:
         return self.bkup_em
     
     # backup email setter
-    def set_bkup_em(self, b):
-        b = input('Enter backup email associated with site: ')
+    def set_bkup_em(self, b): 
         if b is None:
             pass
         self.bkup_em = b
@@ -67,6 +59,5 @@ class Data:
         return self.key
 
     # key setter
-    def set_key(self, k):
-        k = Fernet.generate_key()
+    def set_key(self, k): 
         self.key = k

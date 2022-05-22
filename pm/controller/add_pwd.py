@@ -36,12 +36,12 @@ cursor = connection.cursor()
 # instantiate Data objec
 d = Data.Data()
 # add attributes
-d.set_user()
-d.set_pwd()
-d.set_email()
-d.set_site()
-d.set_bkup_em()
-d.set_key()
+d.set_user(input('Enter new username to add: '))
+d.set_pwd(getpass('Enter new password to add: '))
+d.set_email(input('Enter email associated with site: '))
+d.set_site(input('Enter website to add: '))
+d.set_bkup_em(input('Enter backup email associated with site: '))
+d.set_key(Fernet.generate_key())
 
 user = d.get_user()
 pwd = d.get_pwd()

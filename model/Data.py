@@ -12,32 +12,60 @@ class Data:
         self.bkup_em = bkup_em
         self.key = key
     
+    # username getter
     def get_user(self):
-       self.usr = input('Enter new username to add: ')
        return self.usr
+
+    # username setter
+    def set_user(self, u):
+        u = input('Enter new username to add: ')
+        self.usr = u
     
+    # password getter
     def get_pwd(self):
-        self.pwd = getpass('Enter new password to add: ')
         return self.pwd
 
+    # password setter
+    def set_pwd(self, p):
+        p = getpass('Enter new password to add: ')
+        self.pwd = p
+
+    # website getter
     def get_site(self):
-        self.site = input('Enter website to add: ')
         return self.site
     
+    # website setter
+    def set_site(self, s):
+        s = input('Enter website to add: ')
+        self.site = s
+
+    # email getter
     def get_email(self):
-        self.email = input('Enter email associated with site: ')
-        if self.email is None:
-            pass
-        else:
-            return self.email
+        return self.email
 
+    # email setter
+    def set_email(self, e):
+        e = input('Enter email associated with site: ')
+        if e is None:
+            pass
+        self.email = e
+
+    # backup email getter
     def get_bkup_em(self):
-        self.bkup_em = input('Enter backup email associated with site: ')
-        if self.bkup_em is None:
+        return self.bkup_em
+    
+    # backup email setter
+    def set_bkup_em(self, b):
+        b = input('Enter backup email associated with site: ')
+        if b is None:
             pass
-        else:
-            return self.bkup_em
+        self.bkup_em = b
 
-    def get_key(self):
-        self.key = Fernet.generate_key()
+    # key getter
+    def get_key(self): 
         return self.key
+
+    # key setter
+    def set_key(self, k):
+        k = Fernet.generate_key()
+        self.key = k

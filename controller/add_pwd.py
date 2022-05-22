@@ -3,6 +3,7 @@ import os
 from getpass import getpass
 from cryptography.fernet import Fernet
 from dotenv import load_dotenv
+import Data 
 
 
 
@@ -26,6 +27,10 @@ except Exception as e:
 # create cursor for queries
 cursor = connection.cursor()
 
+# instantiate Data objec
+d = Data.Data()
+# add attributes
+user = d.get_user
 
 # insert collected attributes into table
 # table_query = f'INSERT INTO {TABLE} VALUE ({}, {}, {});'

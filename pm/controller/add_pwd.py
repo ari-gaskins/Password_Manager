@@ -56,4 +56,4 @@ table_query = f'''INSERT INTO {TABLE} (username, pass_word, website, email, back
 VALUES (%s, %s, %s, %s, %s);'''
 record_data = (user, pwd, site, email, bkup_email)
 cursor.execute(table_query, record_data)
-cursor.commit()
+connection.commit()
